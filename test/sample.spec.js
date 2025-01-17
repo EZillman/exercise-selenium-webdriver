@@ -1,6 +1,22 @@
 const {By, Builder, Browser} = require('selenium-webdriver');
 const assert = require('assert');
 
+describe('Open Edge', function () {
+    let driver;
+    before(async function () {
+        driver = await new Builder().forBrowser(Browser.EDGE).build();
+    });
+
+    it('Open samplesite in Edge', async function () {
+        await driver.get('https://artoftesting.com/samplesiteforselenium');
+    });
+
+    after(async function () {
+        await driver.quit();
+    });
+});
+
+/*
 (async function test() {
     let driver;
     try {
@@ -13,3 +29,4 @@ const assert = require('assert');
         await driver.quit();
     }
 }())
+*/
