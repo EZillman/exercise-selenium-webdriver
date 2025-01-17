@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/EZillman/exercise-selenium-webdriver#readme",
   "dependencies": {
-    "selenium-webdriver": "^4.27.0",
+    "selenium-webdriver": "^4.27.0"
+  },
+  "devDependencies": {
     "mocha": "11.0.1"
   }
 }
