@@ -1,5 +1,5 @@
 const {By, Builder, Browser} = require('selenium-webdriver');
-const assert = require('assert');
+//const assert = require('assert');
 
 describe('Test IKEA', function () {
     let driver;
@@ -13,10 +13,14 @@ describe('Test IKEA', function () {
         await driver.manage().setTimeouts({implicit: 500});
     });
 
-    it('Show favourites', async function () {
+    it('Navigate to favourites', async function () {
         let favouritesButton = await driver.findElement(By.xpath('/html/body/header/div/ul/li/a'));
-
         await favouritesButton.click();
+    });
+
+    it('Click on searchfield', async function () {
+        let searchfield = await driver.findElement(By.className('search-wrapper'));
+        await searchfield.click();
     });
 
     after(async function () {

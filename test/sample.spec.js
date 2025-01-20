@@ -1,5 +1,5 @@
 const {By, Builder, Browser} = require('selenium-webdriver');
-const assert = require('assert');
+//const assert = require('assert');
 
 describe('Open Edge', function () {
     let driver;
